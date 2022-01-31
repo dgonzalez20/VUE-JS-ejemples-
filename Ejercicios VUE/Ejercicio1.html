@@ -16,16 +16,16 @@
 <div id="applicacion">
     <div v-bind:class="Color">Prueba de cambio de color con VUE js</div>
 </div>
+</body>
     <script>
-    const aplicacion={
-        data(){
-            return{
+    const aplicacion ={
+        data() {
+            return {
                 Color:'Color',
 
            }
-        },
+        }
     }
-    Vue.create(aplicacion).mount('#aplicacion')
+    Vue.createApp(aplicacion).mount('#aplicacion')
     </script>
-</body>
 </html>
