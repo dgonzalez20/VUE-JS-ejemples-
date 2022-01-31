@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/vue@next"></script>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 </title>
+    <!-- Definición de estilos de prueba en VUE JS -->
+    <style>
+         .Color{
+            background-color: #223244;
+        }
+    </style>
+</head>
+<body>
+<!--Apertura de contenedor principal  aplicacion -->
+<div id="applicacion">
+    <div v-bind:class="Color">Prueba de cambio de color con VUE js</div>
+</div>
+    <script>
+    const aplicacion={
+        data(){
+            return{
+                Color:'Color',
+
+           }
+        },
+    }
+    Vue.create(aplicacion).mount('#aplicacion')
+    </script>
+</body>
+</html>
