@@ -6,26 +6,25 @@
     <title>Ejercicio 1 </title>
     <!-- Definición de estilos de prueba en VUE JS -->
     <style>
-         .Color{
-            background-color: #223244;
+         .Fondo {
+            background-color: #6666
         }
     </style>
 </head>
 <body>
-<!--Apertura de contenedor principal  aplicacion -->
-<div id="applicacion">
-    <div v-bind:class="Color">Prueba de cambio de color con VUE js</div>
+<div id="app">  <!--Apertura de contenedor principal aplicacion -->
+    <div v-bind:class="Fondo">Prueba de cambio de color con VUE js</div>
 </div>
 </body>
     <script>
-    const aplicacion ={
-        data() {
+    const aplicacion = {
+        data(){
             return {
-                Color:'Color',
+            Fondo:'Fondo',
 
            }
-        }
+        },
     }
-    Vue.createApp(aplicacion).mount('#aplicacion')
+    Vue.createApp(aplicacion).mount('#app')
     </script>
 </html>
