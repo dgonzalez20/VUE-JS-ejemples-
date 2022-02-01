@@ -8,7 +8,7 @@
 <body>
  <div id="app">
      <!--Genero datos que serán manipulados en el for -->
-     <p v-for=" deportes in deporte" :key="deportes">
+     <p v-for=" deporte in deportes" :key="deporte">
          {{'Nombre: ${deporte.nombre}'}}
          {{'Apellido:${deporte.apellido}' }}
          {{'Licencia:${deporte.licencia}'}}
@@ -20,9 +20,10 @@ const app= {
     data() {
         return
         {
-            deporte:[{Nombre: 'Luis', Apellido: 'Garcia', Licencia: 'Caducada'}]
+            deportes:[{Nombre: 'Luis', Apellido: 'Garcia', Licencia: 'Caducada'}]
         }
-    }
+    },
 }
+Vue.createApp(app).mount('#app')
 </script>
 </html>
