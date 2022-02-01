@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5 </title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+ <div id="app">{{imprimirMensaje()+ "" +MostrarNombre('David')}}</div>
+</body>
+<script>
+    const app={
+        data(){
+            return{
+                //Retorno variable saludar con contenido
+                saludar:'Buen día',
+            }
+        },
+        /*
+        * Método (equivalente a funtion) que accede a la variable saludar)
+        * */
+        methods:{
+            imprimirMensaje(){
+                return this.saludar
+            },
+            /*Paramétro nombre, pasado en la línea 10, una vez tenemos este nombre
+            * comprobamos que tenga una longitud determinada*/
+            MostrarNombre(nombre){
+                if (nombre.length <10){
+                   return nombre
+                }else {
+                    return "No ha pasado el filtro de longitud"
+                }
+            },
+        },
+    }
+    Vue.CreateApp(app).mount('#app')
+</script>
+</html>
