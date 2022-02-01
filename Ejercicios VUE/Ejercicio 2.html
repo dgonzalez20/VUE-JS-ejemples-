@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 </title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+ <div id="app">
+    <span v-if="seen"> Prueba de v-if </span>
+</div>
+</body>
+<script>
+const app={
+    data(){
+        return{
+            /*Siendo true mostrará el contenido de div #app
+            * En caso de ser falso no va a mostar nada */
+            seen:true,
+            seen:false
+        }
+
+    },
+}
+Vue.createApp(app).mount('#app')
+</script>
+</html>
